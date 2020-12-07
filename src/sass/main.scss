@@ -1,0 +1,241 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+@font-face {
+    font-family: 'clementine';
+    src: url('../assets/Clementine-BWB8l.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'lotus';
+    src: url('../assets/Lotuseater-d9A46.otf') format('truetype');
+}
+
+html {
+    overflow: hidden;
+    // cursor: none;
+
+    body {
+        margin: 0;
+        font-size: 62.5%;
+        box-sizing: border-box;
+
+        canvas {
+            background-color: #111;
+            display: none;
+        }
+
+        .first-animation {
+            height: 100vh;
+            position: relative;
+            background-color: $color-blue-pale;
+
+            .on-load {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%, -50%);
+                color: $color-pink;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-family: 'clementine';
+                font-size: 3rem;
+                width: 30rem;
+                height: 20rem;
+        
+                .full-name-overlay {
+                    position: relative;
+        
+                    .overlay {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: $color-blue-pale;
+                    }
+                }
+        
+                hr {
+                    width: 5%;
+                    border: none;
+                    border-bottom: 1px solid $color-pink;
+                }
+            }
+        }
+
+        .navbar {
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            height: 10vh;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 5;
+
+            a {
+                color: $color-brown;
+                text-decoration: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+                font-family: 'lotus';
+                line-height: 2.5rem;
+                height: 2rem;
+                margin-top: 1.3rem;
+            }
+
+            .active {
+                background-color: $color-bone;
+                padding: 0 0.5rem;
+                border-radius: 5px;
+                color: $color-brown;
+            }
+
+            .home-link {
+                margin-left: 4rem;
+            }
+
+            .about-link {
+                margin-right: 2rem;
+                margin-left: auto;
+            }
+
+            .work-link {
+                margin-right: 4rem;
+            }
+        }
+    
+        .content {
+            background-color: transparent;
+            height: 80vh;
+            position: absolute;
+            top: 10vh;
+    
+            .picture-about {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .me-baby {
+                    transform: translateY(-5rem);
+                    width: auto;
+                    height: 70%;
+                }
+    
+                .about {
+                    color: $color-white;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    opacity: 0;
+                    text-align: center;
+                    color: $color-blue;
+                    margin-left: 5%;
+    
+                    hr {
+                        border: none;
+                        border-bottom: 5px solid $color-bone;
+                        width: 70%;
+                    }
+
+                    .full-name-about {
+                        font-family: 'clementine';
+                        font-size: 3rem;
+                    }
+    
+                    .text-about {
+                        width: 70%;
+                        text-align: center;
+                        margin-left: 15%;
+                        font-family: 'clementine';
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            height: 10vh;
+            background-color: transparent;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            z-index: 5;
+
+            .icon {
+                height: 2rem;
+                margin-right: 1rem;
+                cursor: pointer;
+                margin-bottom: 1rem;
+
+                &:last-child {
+                    margin-right: 4rem;
+                }
+            }
+        }
+
+        .work-content {
+            height: 100vh;
+            position: relative;
+            background-color: $color-blue-pale;
+
+            .helenos-project {
+                padding-top: 10vh;
+                position: relative;
+                height: 80vh;
+
+                .helenos-img {
+                    height: 80%;
+                    width: 40%;
+                    margin-top: 8vh;
+                    margin-left: 15%;
+                    vertical-align: middle;
+                }
+
+                .helenos-text {
+                    display: inline-block;
+                    vertical-align: middle;
+                    background-color: #D7CEB2;
+                    color: white;
+                    text-align: center;
+                    transform: translate(-40%, 50%);
+                    padding: 0 1rem;
+                    padding-bottom: 5rem;
+                    padding-top: 1rem;
+                    font-family: 'lotus';
+                    font-size: 1rem;
+                    width: 20rem;
+                    height: 4rem;
+                    
+                    h1 {
+                        margin: 0;
+                        padding-bottom: 0.5rem;
+                    }
+
+                    span {
+                        display: block;
+                        width: 60%;
+                        margin-left: 20%;
+                    }
+
+                    .go-helenos {
+                        height: 2rem;
+                        display: block;
+                        position: absolute;
+                        bottom: 0.5rem;
+                        right: 0.5rem;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }    
+}
